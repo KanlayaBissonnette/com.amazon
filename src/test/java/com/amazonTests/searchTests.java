@@ -25,7 +25,10 @@ public class searchTests {
 
 	@Test
 	public void seachItem() throws InterruptedException {
-		sp.search();
+		sp.clickSearchBox();
+		sp.clearSearchBox();
+		sp.searchItem();
+		sp.clickSearchBtn();
 		
 	}
 

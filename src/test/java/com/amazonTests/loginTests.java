@@ -29,7 +29,7 @@ public class loginTests {
 		  lp.email_Login();
 		  lp.clickContinueBtn();
 		  lp.password_Login();
-		  lp.clickSignIn();
+		  lp.clickSignInBtn();
 	          
 	  }
 

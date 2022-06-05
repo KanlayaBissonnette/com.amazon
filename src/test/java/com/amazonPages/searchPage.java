@@ -17,16 +17,24 @@ public class searchPage {
 	@FindBy(id ="twotabsearchtextbox")
 	public WebElement searchBox;
 
-	@FindBy(xpath = "//*[@id='nav-search-submit-button']")
+	@FindBy(id = "nav-search-submit-button")
 	public WebElement submitBtn;
-
-	public void search() throws InterruptedException {
+	
+	public void clickSearchBox() {
 		searchBox.click();
+	}
+	
+	public void clearSearchBox() {
 		searchBox.clear();
-		searchBox.sendKeys("TV");
-		Thread.sleep(3000);
+	}
+	
+	public void clickSearchBtn() {
 		submitBtn.click();
-		
+	}
+	
+	public void searchItem() throws InterruptedException {
+		searchBox.sendKeys(BaseClass.getProperty("searchItem"));
+		Thread.sleep(3000);
 	}
 	
 	

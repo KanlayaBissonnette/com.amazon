@@ -15,23 +15,24 @@ public class loginPage {
 		PageFactory.initElements(BaseClass.getDriver(), this);
 	}
 
-	@FindBy(xpath = "//a[@id='nav-link-accountList']")
-	public WebElement loginBtn;
-
+	
+	@FindBy(id = "nav-link-accountList-nav-line-1")
+	public WebElement signinTab;
+	
 	@FindBy(id = "ap_email")
 	public WebElement emailField;
-
-	@FindBy(xpath = "//*[@id='continue']")
+	
+	@FindBy(id = "continue")
 	public WebElement continueBtn;
-
+	
 	@FindBy(id = "ap_password")
 	public WebElement passwordField;
-
+	
 	@FindBy(id = "signInSubmit")
-	public WebElement signInBtn;
+	WebElement signinBtn;
 
 	public void clickSiginTab() {
-		loginBtn.click();
+		signinTab.click();
 	}
 
 	public void email_Login() {
@@ -45,8 +46,8 @@ public class loginPage {
 		passwordField.sendKeys(BaseClass.getProperty("password"));
 	}
 	
-	public void clickSignIn() {
-		signInBtn.click();
+	public void clickSignInBtn() {
+		signinBtn.click();
 	}
 
 }
